@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="src/output.css">
+  <title>Portfolio | Étudiant Génie Civil</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Configuration Tailwind (optionnelle) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans text-gray-800 scroll-smooth">
+
+  <!-- ================= HEADER / NAVBAR ================= -->
+  <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
+    <nav class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-primary">MonPortfolio</h1>
+
+      <!-- Desktop menu -->
+      <ul class="hidden md:flex space-x-6 font-medium">
+        <li><a href="#home" class="hover:text-primary">Accueil</a></li>
+        <li><a href="#about" class="hover:text-primary">À propos</a></li>
+        <li><a href="#skills" class="hover:text-primary">Compétences</a></li>
+        <li><a href="#projects" class="hover:text-primary">Projets</a></li>
+        <li><a href="#contact" class="hover:text-primary">Contact</a></li>
+      </ul>
+
+      <!-- Burger button -->
+      <button id="burger" class="md:hidden focus:outline-none">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+      <ul class="flex flex-col p-4 space-y-3 font-medium">
+        <li><a href="#home" class="block">Accueil</a></li>
+        <li><a href="#about" class="block">À propos</a></li>
+        <li><a href="#skills" class="block">Compétences</a></li>
+        <li><a href="#projects" class="block">Projets</a></li>
+        <li><a href="#contact" class="block">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section id="home" class="min-h-screen flex items-center bg-gray-50 pt-24">
+    <div class="max-w-7xl mx-auto px-4 text-center animate-on-scroll">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">
+        Étudiant en Génie Civil
+      </h2>
+      <p class="text-lg md:text-xl text-gray-600 mb-6">
+        Passionné par la technologie, l’anglais et les projets intelligents
+      </p>
+      <a href="#projects" class="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+        Voir mes projets
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= À PROPOS ================= -->
+  <section id="about" class="py-20">
+    <div class="max-w-5xl mx-auto px-4 animate-on-scroll">
+      <h3 class="text-3xl font-bold mb-6 text-center">À propos de moi</h3>
+      <p class="text-gray-600 mb-8 text-center">
+        Étudiant ambitieux en génie civil, je m’intéresse aux nouvelles technologies,
+        à l’apprentissage continu et à l’amélioration personnelle. Mon objectif est
+        de combiner ingénierie, organisation et innovation.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 border rounded-lg text-center">
+          <h4 class="font-semibold text-lg mb-2">Discipline</h4>
+          <p class="text-gray-600">Rigueur, constance et engagement quotidien.</p>
+        </div>
+        <div class="p-6 border rounded-lg text-center">
+          <h4 class="font-semibold text-lg mb-2">Apprentissage</h4>
+          <p class="text-gray-600">Toujours apprendre et s’adapter.</p>
+        </div>
+        <div class="p-6 border rounded-lg text-center">
+          <h4 class="font-semibold text-lg mb-2">Excellence</h4>
+          <p class="text-gray-600">Viser la qualité dans chaque projet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COMPÉTENCES ================= -->
+  <section id="skills" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 animate-on-scroll">
+      <h3 class="text-3xl font-bold mb-10 text-center">Compétences</h3>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="p-6 bg-white rounded-lg shadow text-center">Génie civil</div>
+        <div class="p-6 bg-white rounded-lg shadow text-center">Anglais</div>
+        <div class="p-6 bg-white rounded-lg shadow text-center">Python / Web</div>
+        <div class="p-6 bg-white rounded-lg shadow text-center">Organisation & communication</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJETS ================= -->
+  <section id="projects" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 animate-on-scroll">
+      <h3 class="text-3xl font-bold mb-10 text-center">Projets</h3>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Project card -->
+        <div class="border rounded-lg p-6">
+          <h4 class="font-semibold text-lg mb-2">Projet 1</h4>
+          <p class="text-gray-600 mb-4">Description courte du projet.</p>
+          <button class="text-primary font-medium">Voir plus →</button>
+        </div>
+
+        <div class="border rounded-lg p-6">
+          <h4 class="font-semibold text-lg mb-2">Projet 2</h4>
+          <p class="text-gray-600 mb-4">Description courte du projet.</p>
+          <button class="text-primary font-medium">Voir plus →</button>
+        </div>
+
+        <div class="border rounded-lg p-6">
+          <h4 class="font-semibold text-lg mb-2">Projet 3</h4>
+          <p class="text-gray-600 mb-4">Description courte du projet.</p>
+          <button class="text-primary font-medium">Voir plus →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <!-- ================= CONTACT ================= -->
+<section id="contact" class="py-20 bg-gray-50">
+  <div class="max-w-xl mx-auto px-4 animate-on-scroll">
+    <h3 class="text-3xl font-bold mb-6 text-center">Contact</h3>
+
+    <!--
+      IMPORTANT :
+      Remplace "tonemail@email.com" par TON VRAI EMAIL
+    -->
+    <form
+      action="mailto:mahamadou9629@gmail.com"
+      method="POST"
+      enctype="text/plain"
+      class="space-y-4"
+    >
+      <input
+        type="text"
+        name="Nom"
+        placeholder="Nom"
+        required
+        class="w-full p-3 border rounded-lg"
+      />
+
+      <input
+        type="email"
+        name="Email"
+        placeholder="Email"
+        required
+        class="w-full p-3 border rounded-lg"
+      />
+
+      <textarea
+        name="Message"
+        rows="4"
+        placeholder="Message"
+        required
+        class="w-full p-3 border rounded-lg"
+      ></textarea>
+
+      <button
+        type="submit"
+        class="w-full bg-primary text-white py-3 rounded-lg hover:bg-blue-700 transition"
+      >
+        M’écrire un email
+      </button>
+    </form>
+
+    <p class="text-sm text-gray-500 text-center mt-4">
+      Le message s’ouvrira directement dans votre application email.
+    </p>
+  </div>
+</section>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="py-6 text-center text-gray-500 text-sm">
+    © 2026 - Portfolio personnel
+  </footer>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+    // Burger menu
+    const burger = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Scroll animations
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    animatedElements.forEach(el => {
+      el.classList.add('opacity-0', 'translate-y-6', 'transition', 'duration-700');
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
